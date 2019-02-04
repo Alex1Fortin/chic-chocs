@@ -1,0 +1,17 @@
+/*
+HTML 5 Template Name: 
+File: Gallery 8 CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#gallery{display:block; width:100%; line-height:1.6em;}
+#gallery figure{}
+#gallery figure header{margin:0 0 15px 0; padding:0; font-size:20px; line-height:normal;}
+#gallery figure figcaption{display:block; width:100%; margin:0; padding:0; clear:both;}
+#gallery ul, #gallery img{margin:0; padding:0; list-style:none;}
+#gallery li{display:block; float:left; width:300px; margin:0 30px 30px 0; padding:0;}
+#gallery li.last{margin-right:0;}
+#gallery li a img{display:block; width:280px; height:260px; padding:9px; border:1px solid #B7B7B7;}
+#gallery li a:hover img{border-color:#FF9900;}

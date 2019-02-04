@@ -1,12 +1,208 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title> Work</title>
-</head>
-<body>
-	<p>
-		<h1>contact</h1>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../js/arcgisonline/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../js/arcgisonline/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="../js/arcgisonline/css/jsapi-map.css">
+    <link rel="stylesheet" type="text/css" href="../js/arcgisonline/css/map.css">
+    <script type="text/javascript" src="../js/arcgisonline/config.js">
+    </script>
+    <script type="text/javascript" src="../js/jsapi/dojo/dojo.js">
+    </script>
+    <script type="text/javascript" src="../js/arcgisonline/base.js">
+    </script>
+    <script type="text/javascript" src="../js/arcgisonline/arcgisonline.js">
+    </script>
+    <script type="text/javascript">
+      dojo.require("esri.arcgis.utils");
+      dojo.require("esri.map");
+      dojo.require("esri.IdentityManager");
+      dojo.require("arcgisonline.map.main");
+      dojo.require("arcgisonline.map.print");
+      dojo.require("esri.virtualearth.VETiledLayer");
+      dojo.require("esri.layers.WebTiledLayer");
+      dojo.require("esri.layers.VectorTileLayer");
+      dojo.require("esri.layers.WMSLayer");
+      dojo.require("esri.layers.KMLLayer");
+      dojo.require("esri.layers.osm");
+      dojo.require("esri.layers.FeatureLayer");
+      dojo.require("esri.tasks.PrintTask");
+      dojo.require("esri.dijit.Scalebar");
 
-	</p>
-</body>
+      dojo.addOnLoad(init);
+
+      function init(){
+        esri.i18nBundle = dojo.i18n.getLocalization("arcgisonline", "arcgisonline");
+        document.getElementById("loadingMsg").innerHTML = esri.i18nBundle.arcGISServerServices.loadingShort;
+
+        document.title = esriGeowConfig.portalName || esri.i18nBundle.common.arcgis;
+        window.name = "WebMapViewerPrint";
+        arcgisonline.map.print.initPrint();
+      }
+    </script>
+    <style>
+      body {
+        -webkit-print-color-adjust:exact;
+      }
+      html {
+        width: 100%;
+        height: 90%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        background-color: #FFF;
+      }
+
+      .printDiv {
+        padding: 10px;
+      }
+
+      .esriScaleLabelDiv {
+        top: -7px;
+      }
+
+      .esriRtl .esriScalebarLabel {
+        width: 100%;
+        text-align: left;
+      }
+
+      .esriScalebarSecondNumber {
+        left: 85%;
+      }
+
+      .esriRtl .esriScalebarSecondNumber {
+        left: -10px;
+      }
+
+      .esriScalebarLabel {
+        top: 3px;
+      }
+
+      .esriScalebarEnglishLine {
+        top: -1px;
+      }
+
+      .esriScalebarMetricLine{
+        top: 4px;
+      }
+
+      .esriScalebar {
+        margin-right: 20px;
+        float: right;
+        width: auto;
+        position: relative;
+      }
+
+      .esriRtl .esriScalebar {
+        margin-right: auto;
+        margin-left: 10px;
+        float: left;
+      }
+
+      .esriScalebarLine {
+        width: auto;
+      }
+
+      .trailing10 {
+        right: 10px;
+      }
+
+      .esriRtl .trailing10 {
+        right: auto;
+        left: 10px;
+      }
+
+      @media print {
+        .printDiv {
+          padding: 0;
+        }
+      }
+      @media print and (orientation: landscape) {
+        /* landscape styles */
+      }
+
+      @media print and (orientation: portrait) {
+        /* portrait styles */
+      }
+    </style>
+    <script type="text/javascript">
+      dojo.require("esri.map");
+      var isEmbedded = null;
+    </script>
+  </head>
+  <body class="soria esri" style="background-color:#FFF; width:960px; height:700px;">
+    <div id="headerBanner" dojotype="arcgisonline.sharing.dijit.ClassificationBanner">
+    </div>
+    <div id="printDiv" class="printDiv" style="display:none;">
+      <table width="948">
+        <tbody>
+        <tr>
+          <td>
+            <!-- title -->
+            <div id="print-title">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table cellspacing="0" cellpadding="0" width="946" style="border-collapse: collapse;">
+              <tbody>
+              <tr>
+                <td id="print-legend-td" width="200" style="border:1px #666 solid;">
+                  <!-- legend -->
+                  <div id="print-legend" style="max-height:565px; overflow:hidden; margin:5px;">
+                    <div id="print-legend-content" style="height: 575px;"></div>
+                  </div>
+                </td>
+                <td id="print-map-td" style="border:1px #666 solid;"> <!--width="740" -->
+                  <!-- map -->
+                  <div id="print-map" style="position:relative; /*width:740px;*/height:575px;">
+                    <img id="print-map-img" src="images/loading-throb.gif" border="0" style="position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;"/>
+                    <span id="loadingMsg" style="position: absolute; top: 55%; left: 47%;"></span>
+                    <img id="print-map-logo" src="images/logo-sm.png" border="0" style="display:none; position: absolute; bottom: 10px;" class="trailing10"/>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%">
+              <tbody>
+              <tr>
+                <td width="80%" valign="top">
+                  <!-- snippet -->
+                  <div id="print-snippet" style="line-height:18px;">
+                  </div>
+                </td>
+                <td id="print-scale-td" width="20%" height="20" valign="top">
+                  <!-- scale -->
+                  <div style="width:140px;line-height:18px;padding-bottom:20px;" class="esriFloatTrailing">
+                    <div id="print-scale" style="width:140px; position:absolute;" class="esriFloatTrailing"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <!-- attribution -->
+                  <div style="line-height:18px; padding-top:10px;">
+                    <div id="print-copyright" class="esriFloatTrailing esriAlignTrailing"></div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="footerBanner" dojotype="arcgisonline.sharing.dijit.ClassificationBanner">
+    </div>
+  </body>
 </html>
