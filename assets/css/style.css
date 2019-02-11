@@ -109,6 +109,14 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+
+
+.container{
+	width: 80%;
+	margin:auto;
+	margin-left: 10px;
+}
+
 #navbar{
 	background-color: #333;
 	color:#fff;
@@ -141,10 +149,30 @@ input, select, textarea {
  	color:#fff;
 	font-family: "Source sans Pro", sans-serif;
 
+
 }
-#footer{
+.gal {
+	padding: 5px;
+	font-family: "Source sans Pro", sans-serif;
+	margin: 1px 25% 1px 25%
+	
+}
+
+.gal h1{
+	size:50px;
+	font-family: "Source sans Pro", sans-serif;
+	text-align: center;
+
+}
+
+
+.footer{
 	background:#333;
 	color:#fff;
-	text-align:center;
+	text-align:bottom-center;
 	padding: 20px;
-	margin-top: 400px;
+	font-family: "Source sans Condensed", sans-serif;;
+
+
+	
+	}
