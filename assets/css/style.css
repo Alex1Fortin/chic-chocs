@@ -151,6 +151,30 @@ input, select, textarea {
 
 
 }
+
+.titre{
+	text-align: center;
+	font-family: "Source sans Pro", sans-serif;
+	padding: 5px;
+
+
+
+}
+.texte{
+	padding: 5px;
+	font-family: "Source sans Pro", sans-serif;
+	font-size: 22px;
+	text-indent: 50px;
+	letter-spacing: 3px;
+	margin-top: 15px;
+	margin-bottom: 20px
+
+}
+.texte a{
+	text-decoration: line;
+	color:#71aee8;
+}
+
 .gal {
 	padding: 5px;
 	font-family: "Source sans Pro", sans-serif;
@@ -165,14 +189,51 @@ input, select, textarea {
 
 }
 
+.lien a{
+	float: left;
+	text-decoration: none;
+	color: #1f68dd;
+	padding: 1em;
 
-.footer{
+}
+
+.lien a:visited{
+	color: #fff;
+	text-decoration: none;
+
+
+}
+.carte{
+	margin-right: 45%
+	margin-left:45%;
+}
+.carte h1{
+	float:left;
+	padding:5px;
+
+
+}
+
+
+#footer{
 	background:#333;
 	color:#fff;
-	text-align:bottom-center;
+	text-align:center;
 	padding: 20px;
-	font-family: "Source sans Condensed", sans-serif;;
+	font-family: "Source sans Pro", sans-serif;
+
 
 
 	
 	}
+
+#gallery{display:block; width:100%; line-height:1.6em;}
+#gallery figure{}
+#gallery figure header{margin:0 0 0 0; padding:0; font-size:20px; line-height:normal;
+font-family: "Source sans Pro", sans-serif;}
+#gallery figure figcaption{display:block; width:100%; margin:0; padding:0; clear:both;}
+#gallery ul, #gallery img{margin:0; padding:0; list-style:none;}
+#gallery li{display:block; float:left; width:300px; margin:0 30px 30px 0; padding:0;}
+#gallery li.last{margin-right:0;}
+#gallery li a img{display:block; width:280px; height:260px; padding:9px; border:1px solid #B7B7B7;}
+#gallery li a:hover img{border-color:#FF9900;}
