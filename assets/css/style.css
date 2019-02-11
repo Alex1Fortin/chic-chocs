@@ -180,7 +180,7 @@ input, select, textarea {
 	color:#71aee8;
 }
 .texte1{
-	padding: 5px;
+	padding: 25px;
 	font-family: "Source sans Pro", sans-serif;
 	font-size: 22px;
 	text-indent: 50px;
@@ -191,18 +191,49 @@ input, select, textarea {
 	margin-left:25%;
 	text-align:center;
 }
+.titre1{
+	padding: 5px;
+	font-family: "Source sans Pro", sans-serif;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+.li1{
+	padding: 25px;
+	font-family: "Source sans Pro", sans-serif;
+	text-align: center;
+	font-weight: bold;
+	margin-top:10px;
+	font-size: 20px;
+	text-decoration: underline;
+
+
+}
+
+.block{
+	text-align: center;
+	margin-top: 10px;
+	
+	
+}
+.block img{
+	width: 640px;
+}
+
 
 .gal {
 	padding: 5px;
 	font-family: "Source sans Pro", sans-serif;
-	margin: 1px 25% 1px 25%
-	
+	margin: 1px 25% 1px 25%;
+
 }
 
 .gal h1{
-	size:50px;
+	
 	font-family: "Source sans Pro", sans-serif;
-	text-align: center;
+	font-size: 80px;
 
 }
 
