@@ -262,6 +262,25 @@ input, select, textarea {
 
 }
 
+.camping{
+	padding-left: 500px;
+	float:left;
+
+}
+
+#camping1 {
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url(images/camping1.jpg);
+	
+
+}
+.cc1{
+	float:right;
+
+
+}
+
 
 #footer{
 	font-size:10px;
