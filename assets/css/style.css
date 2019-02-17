@@ -117,6 +117,7 @@ input, select, textarea {
 	margin:auto;
 	margin-left: 10px;
 	text-align: center;
+	margin-bottom: 100px;
 }
 
 #navbar{
@@ -158,6 +159,7 @@ input, select, textarea {
 }
 
 .titre{
+	font-size: 50px;
 	text-align: center;
 	font-family: "Source sans Pro", sans-serif;
 	padding: 5px;
@@ -259,28 +261,81 @@ input, select, textarea {
 	float:left;
 	padding:5px;
 
+}
+.carte img{
+	width: 1200px;
+	text-align: center;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 90%;
+
+}
+.cartecamp img{
+	text-align: center;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 80%;
+  }
+
+.camph1 {
+	font-size:50px;
+	padding-top: 10px;
+	text-align: center;
 
 }
 
-.camping{
-	padding-left: 500px;
+.camping ul{
+	padding-left: 200px;
+	float:left; 
+	font-size: 30px
+
+}
+.camping a{
+	text-decoration: line;
+	color: #1f68dd;
+
+}
+.camping img{
+	padding: 50px;
+	border: 5px;
+	border-color: black;
+	border-style: ridge;
+
+
+}
+
+.camping li{
+	padding-bottom: 8px;
+	list-style-type: decimal; 
+	}
+
+#campimg {
+	padding: 50px;
+	border-style: ridge;
+
+
+}
+
+
+#cc2{
+	float:right;
+	padding: 50px;
+
+
+}
+#cc1img {
 	float:left;
 
-}
-
-#camping1 {
-	padding-bottom: 8px;
-	border-bottom: dotted 1px #333;
-	list-style-image: url(images/camping1.jpg);
-	
 
 }
-.cc1{
-	float:right;
-
+.titregal{
+	font-family: "Source sans Pro", sans-serif;
+	font-size: 0px;
+	text-align:center;
 
 }
-
 
 #footer{
 	font-size:10px;
